@@ -54,9 +54,41 @@ footer {
 	margin-left: auto;
 }
 
+.direita{
+	right: 0;
+}
+
+.esquerda{
+	left: 0;
+}
+
 .menu{
-	top:35%; 
+	top:30%; 
 	position: absolute;
+}
+
+.menu a[href*=index]{
+	padding-right: 40px;
+}
+
+.menu a[href*=sobre]{
+	padding-right: 10px;
+}
+
+.menu a[href*=agenda]{
+	padding-right: 30px;
+}
+
+.menu a[href*=musica]{
+	padding-left: 40px;
+}
+
+.menu a[href*=videos]{
+	padding-left: 10px;
+}
+
+.menu a[href*=contato]{
+	padding-left: 30px;
 }
 
 .link-menu{
@@ -141,8 +173,15 @@ footer {
 	line-height: 16px;
 }
 	
+.licensas a{
+	color: #eee;
+}	
+	
 .social-head{
 	font-size: 0px;
+	position: fixed; 
+	top: 0px; 
+	right: 0px;
 }
 
 .social-head li{
