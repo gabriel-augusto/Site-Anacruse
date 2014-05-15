@@ -8,7 +8,8 @@ html, body {
 }
 
 #main {
-	min-height:100%;
+	min-height: calc(100% - 92px);
+	max-height: calc(100% - 92px);
 	height:auto;
 	margin:0px auto;
 	width:100%;
@@ -21,6 +22,13 @@ html, body {
 	height:100%;
 }
 
+.conteudo{
+	width:33%;
+	max-height: inherit;
+	min-height: inherit;
+	position: absolute;
+}
+
 header{
 	position: relative;
 	top: 0;
@@ -31,7 +39,8 @@ header{
 
 footer {
 	display: table;
-	padding: 5px 0 0.4em;
+	/*padding: 5px 0 0.4em;*/
+	padding-top: 10px;
 	clear: both;
 	background-image: url(../img/fundo-rodape.png);
 	position: absolute;
@@ -66,13 +75,6 @@ footer {
 	line-height:3em;
 }
 
-.conteudo{
-	width:33%;
-	max-height: 100%;
-	min-height: 100%;
-	position: absolute;
-}
-
 .conteudo-esquerda{
 	float: left;
 	text-align: right;
@@ -93,7 +95,7 @@ footer {
 
 .conteudo-centro{
 	display: block;
-	min-height:100%;
+	min-height:inherit;
 	height:auto;
 	text-align: center;
 	vertical-align: middle;
