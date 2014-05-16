@@ -67,6 +67,13 @@ footer {
 	position: absolute;
 }
 
+.menu a:hover {
+	color: #4c66a4;
+	text-shadow:4px 1px 2px rgba(185,184,184,0.9);
+	margin: 0px 10px 0px 10px;
+	transition: margin 0.5s
+}
+
 .menu a[href*=index]{
 	padding-right: 40px;
 }
@@ -96,14 +103,15 @@ footer {
 	text-decoration: none;
 }
 
-.texto-header{
+.texto-menu{
 	text-shadow:4px 1px 2px rgba(184,184,184,0.9);
-	font-weight:normal;
-	font-variant:small-caps;
+	font-weight: 500;
+	/*font-variant:small-caps;*/
 	color:#000;
 	letter-spacing:1pt;
 	font-size:32px;
-	font-family:trebuchet MS, sans-serif;
+	/*font-family:trebuchet MS, sans-serif;*/
+	font-family: 'Dosis', sans-serif;
 	line-height:3em;
 }
 
@@ -123,6 +131,15 @@ footer {
 	float: right;
 	text-align: left;
 	right: 0;
+}
+
+.conteudo-direita iframe{
+	float: right;
+	overflow:hidden;
+	width:60px;
+	height:70px;
+	padding-top: 10px;
+	padding-right: 10px;
 }
 
 .conteudo-centro{
@@ -170,6 +187,7 @@ footer {
 	letter-spacing: 0.5pt;
 	font-size:11px;
 	font-family:trebuchet MS, sans-serif;
+	/*font-family: 'Dosis', sans-serif;*/
 	line-height: 16px;
 }
 	
@@ -189,32 +207,49 @@ footer {
 }
 
 .social {
-position: absolute;
-top: 12px;
-right: 0;
-}
-.social li {
-float: left;
-margin-right: 25px;
-}
-.social li a {
-/* tamanho da imagem */
-height: 36px;
-width: 36px;
-/* image replacement */
-display: block;
-text-indent: -9999px;
-}
-.social a[href*="facebook.com"] {
-background-image: url(../img/social2/facebook3.png);
-}
-.social a[href*="youtube.com"] {
-background-image: url(../img/social2/youtube3.png);
-}
-.social a[href*="soundcloud.com"] {
-background-image: url(../img/social2/soundcloud3.png);
+	position: absolute;
+	top: 12px;
+	right: 0;
 }
 
+.social li {
+	float: left;
+	margin-right: 25px;
+}
+
+.social li a {
+	/* tamanho da imagem */
+	height: 36px;
+	width: 36px;
+	/* image replacement */
+	display: block;
+	text-indent: -9999px;
+}
+
+.social a[href*="facebook.com"] {
+	background-image: url(../img/social2/facebook3.png);
+}
+.social a[href*="youtube.com"] {
+	background-image: url(../img/social2/youtube3.png);
+}
+.social a[href*="soundcloud.com"] {
+	background-image: url(../img/social2/soundcloud3.png);
+}
+.social a:hover{
+	margin-top: 8px;
+	transition: margin-top 0.5s;
+}
+/*
+.social a[href*="facebook.com"]:hover{
+	background-image: url(../img/social2/facebook4.png);
+}
+.social a[href*="youtube.com"]:hover {
+	background-image: url(../img/social2/youtube4.png);
+}
+.social a[href*="soundcloud.com"]:hover {
+	background-image: url(../img/social2/soundcloud4.png);
+}
+*/
 .img-rodape-social{
 	padding-top: 0px;
 }
