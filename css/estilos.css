@@ -8,27 +8,43 @@ html, body {
 }
 
 #main {
-	min-height: calc(100% - 92px);
-	max-height: calc(100% - 92px);
-	height:auto;
+	height: calc(100% - 92px);
 	margin:0px auto;
 	width:100%;
 	background-color:#fff;
 	background-image: url(../img/paper-background.jpg);
 }
 
-/* Para o IE */
-* html #main{
-	height:100%;
+#main img[src*=MACACRUSE]{
+	height: 100%;
+	float: left;
 }
 
-.conteudo{
-	width:33%;
-	max-height: inherit;
-	min-height: inherit;
+#main h1{
 	position: absolute;
+	float: left;
 }
 
+#main img[src*=logo]{
+	width: 420px;
+}
+
+#main iframe{
+	float: right;
+	overflow:hidden;
+	width:60px;
+	height:70px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+/*
+.conteudo{
+	width: auto;
+	height: inherit;
+	float: left;
+}
+*/
 header{
 	position: relative;
 	top: 0;
@@ -54,75 +70,82 @@ footer {
 	margin-left: auto;
 }
 
-.direita{
-	right: 0;
+#menu{
+	float: left;
+	height: 100%;
+	width: 420px;
 }
 
-.esquerda{
-	left: 0;
-}
-
-.menu{
-	top:30%; 
+.topico{
+	/*float: left;*/
 	position: absolute;
+	margin-left: 190px; 
+	margin-top: 125px;
+	width: 160px;
 }
 
-.menu a[href*=index]{
-	padding-right: 40px;
-}
-
-.menu a[href*=sobre]{
-	padding-right: 10px;
-}
-
-.menu a[href*=agenda]{
-	padding-right: 30px;
-}
-
-.menu a[href*=musica]{
-	padding-left: 40px;
-}
-
-.menu a[href*=videos]{
-	padding-left: 10px;
-}
-
-.menu a[href*=contato]{
-	padding-left: 30px;
-}
-
-.link-menu{
-	color: #000;
-	text-decoration: none;
-}
-
-.texto-header{
+.texto-topico{
 	text-shadow:4px 1px 2px rgba(184,184,184,0.9);
-	font-weight:normal;
-	font-variant:small-caps;
+	font-weight: 500;
+	/*font-variant:small-caps;*/
 	color:#000;
 	letter-spacing:1pt;
 	font-size:32px;
-	font-family:trebuchet MS, sans-serif;
-	line-height:3em;
+	/*font-family:trebuchet MS, sans-serif;*/
+	font-family: 'Dosis', sans-serif;
+	line-height:2em;
 }
 
-.conteudo-esquerda{
-	float: left;
-	text-align: right;
-	left: 0;
+.topico a:hover {
+	color: #4c66a4;
+	text-shadow:4px 1px 2px rgba(185,184,184,0.9);
+	font-weight: 600;
+	margin: 0px 10px 0px 10px;
+	transition: margin 0.5s
 }
 
-.conteudo-esquerda img{
-	text-align: left;
-	width: 100%;
-	max-height: inherit;
+.topico a[href*=index]{
+	padding-left: 10px;
 }
 
+.topico a[href*=sobre]{
+	padding-left: 30px;
+}
+
+.topico a[href*=agenda]{
+	padding-left: 50px;
+}
+
+.topico a[href*=musica]{
+	padding-left: 40px;
+}
+
+.topico a[href*=videos]{
+	padding-left: 20px;
+}
+
+.topico a[href*=contato]{
+	padding-left: 0px;
+}
+
+.link-topico{
+	color: #000;
+	text-decoration: none;
+}
+/*
 .conteudo-direita{
 	float: right;
 	text-align: left;
 	right: 0;
+}
+
+.conteudo-direita iframe{
+	float: right;
+	overflow:hidden;
+	width:60px;
+	height:70px;
+	padding-top: 10px;
+	padding-right: 10px;
 }
 
 .conteudo-centro{
@@ -147,7 +170,7 @@ footer {
 	max-width: 100%;
 	max-height: 100%;
 }
-
+*/
 .licensas{
 	position: absolute; 
 	width:100%; 
@@ -170,6 +193,7 @@ footer {
 	letter-spacing: 0.5pt;
 	font-size:11px;
 	font-family:trebuchet MS, sans-serif;
+	/*font-family: 'Dosis', sans-serif;*/
 	line-height: 16px;
 }
 	
@@ -189,32 +213,49 @@ footer {
 }
 
 .social {
-position: absolute;
-top: 12px;
-right: 0;
-}
-.social li {
-float: left;
-margin-right: 25px;
-}
-.social li a {
-/* tamanho da imagem */
-height: 36px;
-width: 36px;
-/* image replacement */
-display: block;
-text-indent: -9999px;
-}
-.social a[href*="facebook.com"] {
-background-image: url(../img/social2/facebook3.png);
-}
-.social a[href*="youtube.com"] {
-background-image: url(../img/social2/youtube3.png);
-}
-.social a[href*="soundcloud.com"] {
-background-image: url(../img/social2/soundcloud3.png);
+	position: absolute;
+	top: 12px;
+	right: 0;
 }
 
+.social li {
+	float: left;
+	margin-right: 25px;
+}
+
+.social li a {
+	/* tamanho da imagem */
+	height: 36px;
+	width: 36px;
+	/* image replacement */
+	display: block;
+	text-indent: -9999px;
+}
+
+.social a[href*="facebook.com"] {
+	background-image: url(../img/social2/facebook3.png);
+}
+.social a[href*="youtube.com"] {
+	background-image: url(../img/social2/youtube3.png);
+}
+.social a[href*="soundcloud.com"] {
+	background-image: url(../img/social2/soundcloud3.png);
+}
+.social a:hover{
+	margin-top: 8px;
+	transition: margin-top 0.5s;
+}
+/*
+.social a[href*="facebook.com"]:hover{
+	background-image: url(../img/social2/facebook4.png);
+}
+.social a[href*="youtube.com"]:hover {
+	background-image: url(../img/social2/youtube4.png);
+}
+.social a[href*="soundcloud.com"]:hover {
+	background-image: url(../img/social2/soundcloud4.png);
+}
+*/
 .img-rodape-social{
 	padding-top: 0px;
 }
