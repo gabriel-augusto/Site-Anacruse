@@ -223,7 +223,8 @@ footer {
 	margin-right: 25px;
 }
 
-.social li a {
+.social a {
+	margin-top: 6px;
 	/* tamanho da imagem */
 	height: 36px;
 	width: 36px;
@@ -242,7 +243,7 @@ footer {
 	background-image: url(../img/social2/soundcloud3.png);
 }
 .social a:hover{
-	margin-top: 8px;
+	margin-top: 0;
 	transition: margin-top 0.5s;
 }
 /*
