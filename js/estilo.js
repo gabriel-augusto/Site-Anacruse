@@ -4,7 +4,9 @@ alert(texto);
 */
 
 redimensionarConteudo();
+tamanhoIframe();
 $( window ).resize(redimensionarConteudo);
+$( window ).resize(tamanhoIframe);
 
 function redimensionarConteudo(){
 var widthMenu = $('#menu').width();
@@ -20,3 +22,11 @@ var estilo2 = "calc(100% - " + larguraConteudoH1 + "px)";
 	else
 		$('#container-conteudo').width(estilo2);
 }
+
+function tamanhoIframe(){
+	var alturaConteudo = $('.conteudo').height();
+	var alturaIframe = alturaConteudo - 70;
+	$('.iframeSC').height(alturaIframe);
+}
+
+      
